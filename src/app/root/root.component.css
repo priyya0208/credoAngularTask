@@ -1,0 +1,150 @@
+::ng-deep mat-icon {
+  color: mediumslateblue;
+  font-size:3vh !important 
+}
+ul {
+  list-style: none;
+  text-indent: -25px;
+ /* key property */
+}
+li {
+  margin-bottom: 10px;
+  margin-left:7vh 
+}
+*, *:focus{
+ outline: none 
+}
+input {
+  font-size:14px;
+}
+.form{
+  width: 500px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  background: #fff 
+}
+.main {
+  background-color: #fff;
+  width:80% 
+}
+.form-item{
+  position: relative;
+  margin-bottom: 15px 
+}
+.form .form-item .input-text{
+  display: block;
+  width: 400px;
+  height: 41px;
+  background: transparent;
+  border: solid 1px #ccc;
+  transition: all .3s ease;
+  padding: 0 15px 
+}
+.form .form-item .input-submit{
+  display: block;
+  width: 400px;
+  height: 41px;
+  background-color: #3f40ef;
+  color:white;
+  border-radius: 10px;
+  padding: 0 15px 
+}
+.form-item input:focus{
+  border-color: blue 
+}
+.form-item label{
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 13px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #fff;
+  padding: 0 10px;
+  color: #999;
+  transition: all .3s ease 
+}
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  border-color: #dc3545 !important;
+}
+.icon-green {
+  color: green;
+}
+.icon-red {
+  color: #dc3545;
+}
+.form-item input:focus + label, .form-item input:valid + label{
+  font-size: 11px;
+  top: -5px 
+}
+.form-item input:focus + label{
+  color: blue 
+}
+.form-submit{
+ padding: 5px 4vh;
+}
+.inner-addon {
+  position: relative;
+}
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.right-addon mat-icon {
+  right: 0px;
+}
+.right-addon input {
+  padding-right: 30px;
+}
+.margin{
+  margin-left:-12px;
+  margin-right:-12px 
+}
+.heading{
+  float:left;
+ line-height:30px;
+ font-weight: bold;
+}
+
+.createAccount{
+  font-size: 5vh;
+ font-weight: bold;
+ line-height: 1;
+  letter-spacing: 0.2vh;
+ padding-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif 
+}
+.leftDiv {
+  padding:15vh 5vh 15vh 15vh 
+}
+.fnamevalid{
+  width: 20%;
+  float: right;
+  margin-top: -53px;
+  margin-right: 22px;
+}
+.emailInput{
+  min-width: 108%;
+ margin-bottom: -10px !important;
+}
+.emailInputValid{
+  width: 20%;
+  float: right;
+  margin-top: -53px;
+  margin-right: 22px;
+}
+.phoneInputValid{
+  width: 20%;
+  float: right;
+  margin-top: -53px;
+  margin-right: 22px;
+}
+.password{
+  width:65%;
+ display:flex;
+ flex-direction: row;
+ height: 58px;
+}

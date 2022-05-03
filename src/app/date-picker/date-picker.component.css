@@ -1,0 +1,110 @@
+::ng-deep ngb-datepicker.dropdown-menu {
+    padding: 0;
+    background-color: white;
+}
+::ng-deep ngb-datepicker-navigation-select>.form-select {
+    padding: 0 0.5rem;
+    font-size: .775rem;
+    height: 1.85rem;
+    margin: auto;
+    border: 3px hidden;
+    padding: 2px;
+    color: black !important;
+}
+::ng-deep .ngb-dp-arrow-btn {
+    display:none 
+}
+::ng-deep ngb-datepicker {
+    position: absolute;
+    background-color: white;
+}
+::ng-deep ngb-datepicker-navigation-select>.form-select>option:hover{
+    background-color: mediumslateblue !important;
+}
+::ng-deep .ngb-dp-weekdays {
+    border-bottom: 0 !important;
+    border-radius: 0;
+    background-color: #f8f9fa;
+    background-color: var(--bs-light);
+}
+.input-text{
+    display: block;
+    width: 300px;
+    height: 41px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px 
+}
+::ng-deep .ngb-dp-weekday{
+    color:black !important;
+    font-weight: bold !important;
+    background-color: #fff !important;
+}
+::ng-deep ngb-datepicker-month {
+    display: block;
+    padding: 22px;
+}
+::ng-deep [ngbDatepickerDayView] {
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 2.25rem !important;
+    background: transparent;
+}
+::ng-deep .bg-primary {
+    --bs-bg-opacity: 1;
+   /* background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    */
+    background-color: mediumslateblue !important;
+    border-radius: 1;
+}
+::ng-deep .ngb-dp-header{
+    background-color: #fff;
+}
+::ng-deep .ngb-dp-navigation-select {
+    display: flex;
+    flex: 1 1 9rem;
+    padding-top: 12px !important;
+}
+::ng-deep .form-select #select {
+    width: 100px;
+}
+::ng-deep ngb-datepicker-navigation-select>.form-select {
+   /* color: #444645;
+    */
+   /* background: white !important;
+    */
+   /* hover on select */
+    width:100px !important;
+   /* padding:10px !important */
+}
+::ng-deep ngb-datepicker-navigation-select>.form-select:focus>option:checked {
+    background: mediumslateblue !important;
+    color:white !important;
+    outline:0 !important;
+   /* selected */
+}
+.btnDP{
+    background-color: mediumslateblue ;
+    margin: 5px;
+    width:100px 
+}
+::ng-deep ngb-datepicker.dropdown-menu {
+    padding: 0;
+    font-size: 14px !important;
+}
+* {
+    font-size:14px;
+}
+.btn-default {
+    margin-left:50px 
+}
+.input-group {
+    width:80% !important 
+}
+.cdk-overlay-container {
+    height: 0 !important;
+    width: 0 !important;
+}

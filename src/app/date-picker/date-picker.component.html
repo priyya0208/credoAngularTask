@@ -1,0 +1,12 @@
+<div class="input-group">
+  <input class="input-text form-control" placeholder="yyyy-mm-dd" [minDate]="minDate" [maxDate]="maxDate"
+  name="dp" ngModel ngbDatepicker #datePicker="ngbDatepicker"  [footerTemplate]="footerTemplate"
+  (ngModelChange)="selectDate($event)" [autoClose]="false" (formatLabel)="formatInputText($event)">
+<button class="btn btn-outline-secondary calendar" (click)="datePicker.open()" type="button"><mat-icon>calendar_month</mat-icon></button>
+ 
+</div>
+<ng-template #footerTemplate>
+  <button class="btn btn-default" (click)="datePicker.close()">Cancel</button>
+
+  <button class="btn btn-secondary btnDP" (click)="datePicker.close()">SetDate</button>
+</ng-template>

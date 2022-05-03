@@ -1,0 +1,101 @@
+<div class="container main">
+  <fieldset class="border p-4 margin">
+     <div class="headingMainDiv">
+        <div class="heading">SOL</div>
+        <div style="float: right;">Already using?<a href="#"> Sign in</a></div>
+     </div>
+  </fieldset>
+  <div class="row">
+     <div class="col-4 leftDiv" >
+        <div class="createAccount">Create an account</div>
+        <ul class="list-unstyled" style="line-height: 1.5">
+           <li>
+              <mat-icon>security</mat-icon>
+              Secure payments through reliable partners
+           </li>
+           <li>
+              <mat-icon>bolt</mat-icon>
+              Fast transfers
+           </li>
+           <li>
+              <mat-icon>percent</mat-icon>
+              Fair Commissions
+           </li>
+           <li>
+              <mat-icon>show_chart</mat-icon>
+              Best variable rate 
+           </li>
+           <li>
+              <mat-icon>thumb_up</mat-icon>
+              Convienience
+           </li>
+        </ul>
+     </div>
+     <div class="col-8" style="padding:15vh">
+        <div class="well">
+           <form class="form" [formGroup]="userForm"
+              >
+              <div class="form-item" style=" min-width: 108%;">
+                 <input type="text" autocomplete="off" class="form-control is-valid input-text " type="text" (keyup)="onSubmit('firstName')"
+                 formControlName="firstName"
+                 id="defaultRegisterFormFirstName"
+                 [ngClass]="{
+                 'has-error ': firstNameFlag}"
+                 [class.is-invalid] = "firstNameFlag"
+                 >
+                 <label for="username">Full Name</label>
+              </div>
+              <div *ngIf="firstNameFlag !==undefined" class="fnamevalid">
+                 <mat-icon [hidden]="firstNameFlag" class="icon-green">check</mat-icon>
+                 <mat-icon [hidden]="!firstNameFlag" class="icon-red">close</mat-icon>
+              </div>
+              <div class="form-item emailInput" >
+                 <input type="text" autocomplete="off" class="input-text form-control is-valid mb-4" type="email" (keyup)="onSubmit('email')"
+                    formControlName="email"
+                    id="defaultRegisterFormEmail">
+                 <label for="email"></label>
+              </div>
+              <div *ngIf="emailFlag !==undefined" class="emailInputValid">
+                 <mat-icon [hidden]="emailFlag" class="icon-green">check</mat-icon>
+                 <mat-icon [hidden]="!emailFlag" class="icon-red">close</mat-icon>
+              </div>
+              <div class="form-item" style="min-width: 108%;">
+                 <input type="text" autocomplete="off" class="input-text form-control is-valid" (keyup)="onSubmit('phone')"
+                    type="text"
+                    appPhoneMask
+                    formControlName="phone"
+                    id="phone_number">
+                 <label for="email">Phone Number</label>
+              </div>
+              <div *ngIf="phoneFlag !==undefined" class="phoneInputValid">
+                 <mat-icon [hidden]="phoneFlag" class="icon-green">check</mat-icon>
+                 <mat-icon [hidden]="!phoneFlag" class="icon-red">close</mat-icon>
+              </div>
+              <div class="password">
+                 <div class="form-item" style="min-width: 108%;">
+                    <input [type]="fieldTextType ? 'text' : 'password'" id="password" autocomplete="off" class="input-text form-control is-valid" formControlName="password" (keyup)="onSubmit('password')">
+                    <label for="password">Password</label>
+                 </div>
+                 <button class="btn" type="button" style="height:41px;position: relative;" (click)="toggleFieldTextType()">
+                    <mat-icon [hidden] = "fieldTextType">visibility</mat-icon>
+                    <mat-icon [hidden] = "!fieldTextType">visibility_off</mat-icon>
+                 </button>
+                 <app-password styl="float:right" *ngIf="userForm.value.password"
+                 [passwordToCheck]="userForm.value.password"
+                 (passwordStrength)="passwordValid($event)"
+                 ></app-password>
+              </div>
+              <div class="form-item">
+                 <app-date-picker></app-date-picker>
+              </div>
+              <div class="form-item">
+                 <input class="btn btn-primary" type="submit" class="input-submit" name="signup" value="Sign up">
+              </div>
+           </form>
+           <div class="form-submit">
+              <input type="checkbox" required name="terms">   <label for="terms">I agree with our Terms of Services and Privacy Policy </label>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
